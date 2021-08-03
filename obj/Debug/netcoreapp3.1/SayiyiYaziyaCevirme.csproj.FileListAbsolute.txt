@@ -1,0 +1,13 @@
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\bin\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.exe
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\bin\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.deps.json
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\bin\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.runtimeconfig.json
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\bin\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.runtimeconfig.dev.json
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\bin\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.dll
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\bin\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.pdb
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\obj\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.csproj.AssemblyReference.cache
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\obj\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.AssemblyInfoInputs.cache
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\obj\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.AssemblyInfo.cs
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\obj\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.csproj.CoreCompileInputs.cache
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\obj\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.dll
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\obj\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.pdb
+C:\Users\Emirhan Sevim\source\repos\SayiyiYaziyaCevirme\obj\Debug\netcoreapp3.1\SayiyiYaziyaCevirme.genruntimeconfig.cache
