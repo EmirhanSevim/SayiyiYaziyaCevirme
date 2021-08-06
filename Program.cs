@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SayiyiYaziyaCevirme
 {
@@ -8,6 +10,7 @@ namespace SayiyiYaziyaCevirme
 
         public static void Main(string[] args)
         {
+
 
             Console.Write("Lütfen Bir Sayı Giriniz = ");
             decimal girilenSayi = Convert.ToDecimal(Console.ReadLine());
@@ -21,12 +24,20 @@ namespace SayiyiYaziyaCevirme
             Console.ReadKey();
         }
 
-        private static string yaziyacevir(decimal tutar, string doviz)
+        public static string yaziyacevir(decimal tutar, string doviz)
         {
+            var dovizler = new Dictionary<string, List<string>>{
+              {"TRY",new List<string> {"TL" , "Kr."} },
+              {"USD",new List<string> {"Dolar" , "Cent"} },
+              {"EUR",new List<string> {"Euro" , "Cent"} },
+              {"GBP",new List<string> {"İngilizSterlini" , "Penny"} },
+             };
+
             string sTutar = tutar.ToString("F2").Replace('.', ','); // Replace('.',',') ondalık ayracının . olma durumu için            
             string lira = sTutar.Substring(0, sTutar.IndexOf(',')); //Tutarın tam kısmı
             string kurus = sTutar.Substring(sTutar.IndexOf(',') + 1, 2);
             string yazi = "";
+
 
             string[] birler = { "", "Bir", "İki", "Üç", "Dört", "Beş", "Altı", "Yedi", "Sekiz", "Dokuz" };
             string[] onlar = { "", "On", "Yirmi", "Otuz", "Kırk", "Elli", "Altmış", "Yetmiş", "Seksen", "Doksan" };
@@ -44,59 +55,45 @@ namespace SayiyiYaziyaCevirme
                 grupDegeri = "";
 
                 if (lira.Substring(i, 1) != "0")
-                    grupDegeri += birler[Convert.ToInt32(lira.Substring(i, 1))] + "Yüz"; //Yüzler                
+                    grupDegeri += birler[Convert.ToInt32(lira.Substring(i, 1))] + "Yüz"; //Yüzler
 
                 if (grupDegeri == "BirYüz") //Biryüz düzeltiliyor.
                     grupDegeri = "Yüz";
 
                 grupDegeri += onlar[Convert.ToInt32(lira.Substring(i + 1, 1))]; //Onlar
 
-                grupDegeri += birler[Convert.ToInt32(lira.Substring(i + 2, 1))]; //Birler                
+                grupDegeri += birler[Convert.ToInt32(lira.Substring(i + 2, 1))]; //Birler
 
-                if (grupDegeri != "") //Binler
+                if (grupDegeri != "") //Binler 
                     grupDegeri += binler[i / 3];
 
                 if (grupDegeri == "BirBin") //Birbin düzeltiliyor.
                     grupDegeri = "Bin";
 
+
                 yazi += grupDegeri;
+
             }
-            if (doviz == "TRY")
-                yazi += " TL ";
-
-            if (doviz == "USD")
-                yazi += " Dolar ";
-
-            if (doviz == "EUR")
-                yazi += " Euro ";
-
-            if (doviz == "GBP")
-                yazi += " İngilizSterlini ";
 
             int yaziUzunlugu = yazi.Length;
+
+            yazi += dovizler[doviz][0];
+
 
             if (kurus.Substring(0, 1) != "0") //Kuruş onlar
                 yazi += onlar[Convert.ToInt32(kurus.Substring(0, 1))];
 
+
             if (kurus.Substring(1, 1) != "0") //Kuruş birler
+
                 yazi += birler[Convert.ToInt32(kurus.Substring(1, 1))];
 
             if (kurus != "00")
             {
-
-                if (doviz == "TRY")
-                    yazi += " Kr.";
-
-                if (doviz == "USD")
-                    yazi += " Cent";
-
-                if (doviz == "EUR")
-                    yazi += " Cent";
-
-                if (doviz == "GBP")
-                    yazi += " Penny";
+                dovizler[doviz].Last();
             }
 
+            yazi += dovizler[doviz][1];
 
             return yazi;
 
